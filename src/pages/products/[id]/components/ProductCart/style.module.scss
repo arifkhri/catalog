@@ -2,6 +2,15 @@
 
 .product-cart {
   width: 300px;
+  @media (min-width: 1000px) {
+    position: absolute;
+    right: 0;
+  }
+
+
+  @media (max-width: 992px) {
+    margin-bottom: 20px;
+  }
 }
 
 .attributes-label {
@@ -10,4 +19,65 @@
 
 .variant-label {
   font-weight: 700;
+}
+
+.qty-input-wrapper {
+display: flex;
+}
+
+.qty-input {
+  width: 14px;
+  border-radius: 0px;
+  border: 1px solid #cdcdcd;
+  padding: 5px 10px;
+
+  &:focus-visible {
+    border-radius: 0px;
+    border: 1px solid $secondaryYellow1 !important;
+    outline: none;
+  }
+}
+
+.btn-subtract-qty {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  padding: 10px !important;
+  border-right: 0 !important;
+
+  &:hover {
+    border: 1px solid #CDCDCD !important;
+    border-right: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    background: #EEF0F0 !important;
+  }
+}
+
+.btn-add-qty {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  padding: 10px !important;
+  border-left: 0 !important;
+
+  &:hover {
+    border: 1px solid #CDCDCD !important;
+    border-left: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    background: #EEF0F0 !important;
+  }
+}
+
+.disabled-qty-input-subtract {
+  cursor: not-allowed;
+  &:hover {
+    background: #FFF;
+  }
+}
+
+
+.attribute-active {
+  border: 1.5px solid $secondaryYellow1  !important;
+  font-weight: 500  !important;
+  background: $secondaryYellowBg1 !important;
 }

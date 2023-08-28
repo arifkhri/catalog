@@ -2,13 +2,23 @@
 @import "./animation";
 @import "./carousel";
 
+
+@import '~notyf/notyf.min.css';
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
+
 html {
   background: linear-gradient(90deg, rgb(238 246 247) 12%, rgb(255, 255, 255) 37%, rgb(252, 254, 244) 86%);
+}
+
+body {
+  margin: 0;
 }
 
 main {
   max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
 }
 
 ul {
@@ -17,4 +27,30 @@ ul {
 
 .link {
   text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.slick-initialized .slick-slide{
+  background-color: #b32532;
+  color: #FFF;
+  height: 200px;
+  margin: 0 15px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  position: relative;
 }

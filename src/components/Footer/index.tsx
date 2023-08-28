@@ -4,7 +4,7 @@ import style from "./style.module.scss";
 
 export default function Footer() {
   return (
-      <div className="d-flex items-center flex-col justify-between mt-6 pt-6">
+      <footer className="d-flex items-center flex-col justify-between mt-6 pt-6">
         <div className={style["social"]}>
           <a
             href="https://facebook.com"
@@ -24,6 +24,6 @@ export default function Footer() {
         <div className={clsx(['mr-2', style['copyright']])}>
           ©2023 Toko Premium Murah
         </div>
-      </div>
+      </footer>
   );
 }

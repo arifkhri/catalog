@@ -1,16 +1,23 @@
 // import style from "./style.module.scss";
 
+import style from "./style.module.scss";
+
 import { CartIcon } from "../../components/Icon";
+import { cartStore } from "../../lib/zustand/stores/cartStore";
+import clsx from "clsx";
 
-export interface ICart {
-  className?: string;
-  children?: React.ReactNode;
-}
+export default function Cart() {
+  const { productsVariants } = cartStore();
+  console.log('🚀 INFO: productsVariants:', productsVariants);
 
-export default function Cart({ children, className }: ICart) {
   return (
     <div>
-      <CartIcon />
+      <div className="relative pointer">
+        <CartIcon />
+        {productsVariants.length > 0 && (
+          <div className={clsx([style["badge"], 'text-sm absolute'])}>{productsVariants.length}</div>
+        )}
+      </div>
     </div>
   );
-};
+}

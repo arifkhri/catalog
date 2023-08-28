@@ -1,3 +1,13 @@
-.detail-card {
+.detail-content {
+  width: 100%;
 
+  h1 {
+    @media (max-width: 992px) {
+      font-size: 20px;
+      padding-top: 8px;
+    }
+  }
+  @media (min-width: 1000px) {
+    width: calc(100% - 400px);
+  }
 }

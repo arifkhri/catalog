@@ -1,0 +1,15 @@
+.header {
+  img {
+    @media (min-width: 300px) {
+      width: 200px;
+    }
+
+    @media (min-width: 992px) {
+      width: 300px;
+    }
+  }
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 300px) {
+    padding: 20px !important;
+  }
+}

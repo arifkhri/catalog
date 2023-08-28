@@ -2,8 +2,17 @@
 
 .social {
   display: flex;
+
+  img {
+    @media (max-width: 992px) {
+      width: 30px;
+    }
+  }
 }
 
 .copyright {
   color: $secondaryGray;
+  @media (max-width: 992px) {
+    font-size: 11px;
+  }
 }

@@ -1,20 +1,21 @@
 import { create } from 'zustand';
 
-import { IProduct } from '../../../types/product';
-
 export interface CartState {
-  products: IProduct[];
+  productsVariants: any[];
+  productVariant: any;
+  addToCart: (values: any) => void;
+  subtractCart: (productId: string) => void;
 }
 
 export const cartStore = create<CartState>()((set, get) => ({
-  products: [],
-  addToCart: (product: IProduct) => {
-    const newList = [...get().products, product];
-    set({products: newList})
+  productsVariants: [],
+  productVariant: null,
+  addToCart: (values: any) => {
+    const newList = [...get().productsVariants, values];
+    set({productsVariants: newList})
   },
   subtractCart: (productId: string) => {
-    const newList = get().products.filter((product) => product.id !== productId);
-    console.log('🚀 ~ file: cartStore.ts:17 ~ newList:', newList);
-    set({products: newList})
+    const newList = get().productsVariants.filter((product) => product.id !== productId);
+    set({productsVariants: newList})
   }
 }))
