@@ -4,8 +4,8 @@
 
 
 @import '~notyf/notyf.min.css';
-@import "~slick-carousel/slick/slick.scss";
-@import "~slick-carousel/slick/slick-theme.scss";
+@import '~react-responsive-carousel/lib/styles/carousel.min.css';
+
 
 html {
   background: linear-gradient(90deg, rgb(238 246 247) 12%, rgb(255, 255, 255) 37%, rgb(252, 254, 244) 86%);
@@ -40,15 +40,26 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.slick-slider {
+  max-width: 500px;
+}
 
 .slick-initialized .slick-slide{
-  background-color: #b32532;
-  color: #FFF;
-  height: 200px;
   margin: 0 15px 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
+
+}
+
+.slick-slider {
+  .slick-list {
+    height: 300px !important;
+  }
+}
+
+.slick-arrow {
+  background: #000;
 }
 
 .main {

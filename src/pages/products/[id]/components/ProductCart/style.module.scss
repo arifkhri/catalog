@@ -3,8 +3,10 @@
 .product-cart {
   width: 300px;
   @media (min-width: 1000px) {
-    position: absolute;
     right: 0;
+    position: fixed;
+    right: 35px;
+    top: 160px;
   }
 
 

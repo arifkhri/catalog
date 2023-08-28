@@ -7,16 +7,9 @@ import { useRouter } from "next/router";
 
 import style from './style.module.scss';
 
-import dynamic from 'next/dynamic'
-
-const DynamicProductCart = dynamic(
-  () => import('./components/ProductCart'),
-  { ssr: false }
-)
-
 import Description from "./components/Description";
 import ImageSlider from "./components/ImageSlider";
-// import ProductCart from "./components/ProductCart";
+import ProductCart from "./components/ProductCart";
 import Spesification from "./components/Spesification";
 import Card from "../../../components/Card";
 import { ArrowLeftIcon } from "../../../components/Icon";
@@ -44,9 +37,9 @@ export default function ProductDetailPage() {
           <h1 className={clsx([style["title"], 'm-0'])}>{product?.name || ''}</h1>
         </div>
 
-        {/* <ImageSlider product={product} /> */}
+        <ImageSlider product={product} />
 
-        <DynamicProductCart product={product} />
+        <ProductCart product={product} />
 
         <Card variant="transparent" className="p-4">
           <Description description={product.description} />
