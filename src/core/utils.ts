@@ -6,6 +6,6 @@ export const toStartCase = (str: string) => {
 	return newstr.join(' ');
 };
 
-export const toIdrFormat = (value: string | number) => {
+export const toIdrFormat = (value: string | number = '') => {
   return 'Rp. ' + value.toString().replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, "$1,");
 }

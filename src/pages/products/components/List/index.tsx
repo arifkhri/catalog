@@ -24,7 +24,7 @@ export default function List() {
 
   return (
     <div className={style["list-item"]}>
-      {data.products.map((product, index) => (
+      {(data?.products || []).map((product, index) => (
         <motion.div
           key={product.id}
           initial="collapsed"
