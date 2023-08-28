@@ -14,7 +14,7 @@ const api = (APIConfig?: IAPIConfig) => {
 
     return new Promise((resolved, reject) => {
       try {
-        fetch(`${baseUrl}${url}?${new URLSearchParams(params).toString()}`, config).then((res: any) => {
+        fetch(`${baseUrl}${url}${new URLSearchParams(params).toString()}`, config).then((res: any) => {
           if (res.status !== 200) {
             reject(res);
           } else {

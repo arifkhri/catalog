@@ -1,22 +1,38 @@
-import { IParams, IData } from "./list";
+import { IData } from "./list";
 
 export type ProductCategories = Array<string>
-export interface IProductsParams extends IParams {
-  category?: string;
-}
 
 export interface IProduct {
   brand: string;
   category: string;
   description: string;
-  discountPercentage: string;
   id: string;
-  images: string[];
   price: number;
   rating: number;
   stock: number;
   thumbnail:  string;
   name:  string;
+  detail_product: IDetailProduct[];
+  variants: IVariant[];
+}
+
+export interface IVariantValue {
+  image: string;
+  label: string;
+  option_value: string;
+}
+
+export interface IVariant {
+  attribute_id: string;
+  id: number;
+  label: string
+  product_id: number;
+  values: IVariantValue[]
+}
+
+export interface IDetailProduct {
+  label: string;
+  description: string;
 }
 export interface IProducts extends IData {
   products: IProduct[]

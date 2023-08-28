@@ -1,12 +1,18 @@
 import api from '../core/api';
-import { IProductsParams } from '../types/product';
 
-const getProducts = (params: IProductsParams): Promise<any> => {
+const getProducts = (): Promise<any> => {
   const { get } = api();
 
-  return get('/data', params);
+  return get('/products');
 }
 
-const productsApi = { getProducts };
+
+const getProductDetail = (url: string): Promise<any> => {
+  const { get } = api();
+
+  return get(url);
+}
+
+const productsApi = { getProducts, getProductDetail };
 export default productsApi;
 

@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.2.0",
-    "@trendyol-js/react-carousel": "^3.0.2",
+    "@types/react-slick": "^0.23.10",
     "clsx": "^1.2.1",
     "encoding": "^0.1.13",
     "fbjs": "^3.0.5",
@@ -19,6 +19,7 @@
     "node-fetch": "^2.6.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-slick": "^0.29.0",
     "swr": "^2.2.1",
     "zustand": "^4.4.0"
   },

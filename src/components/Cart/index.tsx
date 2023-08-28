@@ -7,12 +7,10 @@ export interface ICart {
   children?: React.ReactNode;
 }
 
-const Cart = ({ children, className }: ICart) => {
+export default function Cart({ children, className }: ICart) {
   return (
-    <div className="">
+    <div>
       <CartIcon />
     </div>
   );
 };
-
-export default Cart;

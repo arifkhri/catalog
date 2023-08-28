@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+
+.btn-secondary {
+  border-radius: 6px;
+  background: $white;
+  border: 1px solid $secondaryGray2;
+  padding: 5px;
+
+  &:hover {
+    border: 1.5px solid $secondaryYellow1;
+    font-weight: 500;
+    background: $secondaryYellowBg1;
+  }
+}
+
+.btn-primary {
+  background: $secondaryYellow1;
+  border: 0;
+  border-radius: 5px;
+  color: $white;
+  padding: 10px 20px;
+  font-size: 18px;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
