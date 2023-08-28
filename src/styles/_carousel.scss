@@ -1,0 +1,23 @@
+.carousel {
+  .left-arrow {
+    background: url(https://cdn.dsmcdn.com/web/production/slick-arrow.svg) 25% no-repeat;
+    border: none;
+    cursor: pointer;
+    height: 80px;
+    outline: 0;
+    position: relative;
+    top: 80px;
+  }
+
+  .right-arrow {
+    background: url(https://cdn.dsmcdn.com/web/production/slick-arrow.svg) 50% no-repeat;
+    border: none;
+    cursor: pointer;
+    height: 60px;
+    outline: 0;
+    position: absolute;
+    top: 15px;
+    right: 0;
+  }
+}
+

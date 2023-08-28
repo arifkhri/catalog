@@ -1,1 +1,20 @@
-@import "./utils.scss";
+@import "./utils";
+@import "./animation";
+@import "./carousel";
+
+html {
+  background: linear-gradient(90deg, rgb(238 246 247) 12%, rgb(255, 255, 255) 37%, rgb(252, 254, 244) 86%);
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+}
