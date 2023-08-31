@@ -1,7 +1,10 @@
+@import '../../../styles/variables';
+
 .detail-content {
   width: 100%;
 
   h1 {
+    font-size: 28px;
     @media (max-width: 992px) {
       font-size: 20px;
       padding-top: 8px;
@@ -9,5 +12,18 @@
   }
   @media (min-width: 1000px) {
     width: calc(100% - 400px);
+  }
+}
+
+.price {
+  background: linear-gradient(90deg, rgb(129 182 255) 0%, rgb(25, 120, 166) 49%, rgb(34, 78, 118) 100%);
+  color: $white;
+  margin: 0;
+  font-size: 24px;
+  border-radius: 20px;
+  padding: 2px 15px;
+  font-weight: 700;
+  @media (min-width: 1000px) {
+    font-size: 30px;
   }
 }

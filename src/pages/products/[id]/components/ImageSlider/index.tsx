@@ -1,7 +1,5 @@
 import clsx from "clsx";
-import { useState } from "react";
 import { Carousel } from 'react-responsive-carousel';
-
 
 import style from './style.module.scss'
 
@@ -12,32 +10,6 @@ interface Props {
 }
 
 export default function ImageSlider({ product }: Props) {
-  const [slider, setSlider] = useState<any>({
-    slider1: '',
-    slider2: '',
-  });
-
-  const settings = {
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 300,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  }
-
   function setItemComp(items: IVariantValue[]) {
     const sliderItem: any = [];
     items.forEach((item: IVariantValue) => {
@@ -59,8 +31,8 @@ export default function ImageSlider({ product }: Props) {
   }
 
   return (
-    <div className={clsx(['mb-5', style['image-slider']])}>
-      <Carousel autoPlay thumbWidth={50}>
+    <div className={clsx([style['image-slider']])}>
+      <Carousel autoPlay thumbWidth={50} showStatus={false} showIndicators={false} showThumbs={product?.variants.length > 1}>
         {
           buildSliderItem()
         }

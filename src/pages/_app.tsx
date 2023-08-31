@@ -1,7 +1,6 @@
 import { AppProps } from "next/app";
 import dynamic from "next/dynamic";
 import { Catamaran } from "next/font/google";
-import useSwr, { SWRConfig } from "swr";
 
 const DynamicHeaderPage = dynamic(() => import("../components/Header"), {
   loading: () => <p>Loading...</p>,
@@ -20,15 +19,13 @@ import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <SWRConfig value={{ provider: () => new Map() }}>
-      <main>
-        <div className={`${font.className} overflow-hidden main`}>
-          <DynamicHeaderPage />
-          <Component {...pageProps} />
-          <DynamicFooterPage />
-        </div>
-      </main>
-    </SWRConfig>
+    <main>
+      <div className={`${font.className} overflow-hidden main`}>
+        <DynamicHeaderPage />
+        <Component {...pageProps} />
+        <DynamicFooterPage />
+      </div>
+    </main>
   );
 }
 

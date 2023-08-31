@@ -1,11 +1,12 @@
 # catalog-apps
-
-This repository is built with:
+simple product catalog app with:
 - ⚡️ Next.js 13 with App Router
 - ⚛️ React 18
 - ✨ TypeScript
 - 📏 ESLint — Find and fix problems in your code, also will **auto sort** your imports
 - 🐶 Husky & Lint Staged — Run scripts on your staged files before they are committed
+- Zustand
+- Server Side Rendering
 
 #### Minimum Requirements
 * node `v18.12.0`

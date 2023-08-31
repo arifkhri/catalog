@@ -1,6 +1,3 @@
-// import fetch, { RequestInit } from 'next/fe';
-
-
 interface IAPIConfig {
   baseUrl?: string;
 }

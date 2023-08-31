@@ -7,10 +7,10 @@ const getProducts = (): Promise<any> => {
 }
 
 
-const getProductDetail = (url: string): Promise<any> => {
+const getProductDetail = (id: string): Promise<any> => {
   const { get } = api();
 
-  return get(url);
+  return get(`/products/${id}`);
 }
 
 const productsApi = { getProducts, getProductDetail };

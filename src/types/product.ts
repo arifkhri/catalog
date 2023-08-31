@@ -34,6 +34,3 @@ export interface IDetailProduct {
   label: string;
   description: string;
 }
-export interface IProducts extends IData {
-  products: IProduct[]
-};

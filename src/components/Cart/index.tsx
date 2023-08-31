@@ -1,14 +1,14 @@
 // import style from "./style.module.scss";
 
+import clsx from "clsx";
+
 import style from "./style.module.scss";
 
 import { CartIcon } from "../../components/Icon";
 import { cartStore } from "../../lib/zustand/stores/cartStore";
-import clsx from "clsx";
 
 export default function Cart() {
   const { productsVariants } = cartStore();
-  console.log('🚀 INFO: productsVariants:', productsVariants);
 
   return (
     <div>

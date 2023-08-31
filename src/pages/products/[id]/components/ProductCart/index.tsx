@@ -90,7 +90,6 @@ export default function CategoryItem({ product }: Props) {
 
   function addToCart() {
     const { isValid: isValidAttributes, variants, variantKey } = checkAttributes();
-    console.log('🚀 ~ file: index.tsx:84 ~ form.qty:', form.qty);
 
     if(!isValidAttributes && (product?.variants || []).length > 1) {
       notiyf.error('Mohon pilih varian produk');

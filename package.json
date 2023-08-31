@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.2.0",
-    "@types/react-slick": "^0.23.10",
     "clsx": "^1.2.1",
     "encoding": "^0.1.13",
     "fbjs": "^3.0.5",
@@ -21,9 +20,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-responsive-carousel": "^3.2.23",
-    "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1",
-    "swr": "^2.2.1",
     "zustand": "^4.4.0"
   },
   "devDependencies": {

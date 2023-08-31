@@ -18,9 +18,9 @@ export const ArrowLeftIcon = () => {
       <path
         d="M15 7L10 12L15 17"
         stroke="#000000"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
