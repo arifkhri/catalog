@@ -1,5 +1,3 @@
-import { IData } from "./list";
-
 export type ProductCategories = Array<string>
 
 export interface IProduct {
